@@ -8,11 +8,20 @@ addBtn.addEventListener("click", () => {
     const ticketNum = document.getElementById("ticketNum");
 
 
-
+    const list = document.getElementById("customerList");
     const li = document.createElement("li");
-    li.textContent = `${skiInput.value} 스키 / ${boardInput.value} 보드/ ${tickettime.value}시간권 / ${ticketNum.value}개`;
+
+    const text = document.createElement("span");
+    text.textContent = `${skiInput.value} 스키 / ${boardInput.value} 보드/ ${tickettime.value}시간권 / ${ticketNum.value}개`;
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+
+    li.appendChild(text);
+    li.appendChild(checkbox);
 
     list.appendChild(li);
+
 
     skiInput.value = "";
     boardInput.value = "";
