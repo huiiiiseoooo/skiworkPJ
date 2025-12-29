@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="date-nav">
+        <button id="prevDate">◀</button>
+        <h2 id="currentDateDisplay">2023-10-27</h2>
+        <button id="nextDate">▶</button>
+    </div>
     <div class="inputnumber">
         <form>
             <input type="number" min="0" max="20" id="skiNum">
@@ -20,14 +26,18 @@
             </select>
 
             <input type="number" min="0" max="30" id="ticketNum">
-                <label for="ticketNum">리프트권</label>
+            <label for="ticketNum">리프트권</label>
+
+            <input type="text" id="memoInput" placeholder="메모 (예: 의류추가, 이름 등)">
 
             <input type="button" id="add" value="추가">
+
         </form>
     </div>
-    <ul id="customerList">
-
-    </ul>
+    <ul id="customerList"></ul>
+    <div id="totalSummary">
+        총 리프트권: <span id="totalTickets">0</span>개
+    </div>
 
     <script src="input.js"></script>
 </body>
