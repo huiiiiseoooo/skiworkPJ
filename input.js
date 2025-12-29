@@ -16,9 +16,17 @@ addBtn.addEventListener("click", () => {
 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
+    checkbox.addEventListener("change", () => {
+        text.style.textDecoration = checkbox.checked ? "line-through" : "none" ;
+    })
+
+    const label = document.createElement("label");
+    label.textContent = "반납";
+
+    label.prepend(checkbox);
 
     li.appendChild(text);
-    li.appendChild(checkbox);
+    li.appendChild(label);
 
     list.appendChild(li);
 
